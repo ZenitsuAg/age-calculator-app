@@ -21,26 +21,26 @@ function App() {
   }
 
   return (
-    <main className='bg-off-white h-screen p-3 '>
-       <div className='font-Poppins max-w-[375px] mx-auto bg-white rounded-2xl rounded-br-[100px] p-6 pt-11 mt-20'>
-        <div className="flex flex-row max-w-[300px] gap-3 mx-auto ">
+    <main className='h-screen p-3 bg-off-white'>
+       <div className='font-Poppins max-w-[375px] mx-auto bg-white rounded-2xl rounded-br-[100px] p-6 pt-11 mt-20 md:max-w-[570px] md:p-10'>
+        <div className="flex flex-row max-w-[300px] gap-3 mx-auto md:mx-0 md:max-w-[390px]">
             <Input value={'Day'} onChange={handleDays} placeholder={'DD'} />
             <Input value={'Month'} onChange={handleMonths} placeholder={'MM'} />
             <Input value={'Year'} onChange={handleYears} placeholder={'YYYY'} />
         </div>
 
-        <div className='relative bottom-2 my-10'>
-          <div className='pt-6'>
+        <div className='relative my-10 md:mt-0'>
+          <div className='pt-6 md:pt-8'>
             <hr/>
           </div>
-          <div className='left-[7.5rem] top-0 absolute'>
-            <img src={arrowIcon} alt="arrow icon" className='bg-purple rounded-full mx-auto p-3 w-12 h-12'/>
+          <div className='absolute top-0 left-0 right-0 md:left-auto'>
+            <img src={arrowIcon} alt="arrow icon" className='w-12 h-12 p-3 mx-auto rounded-full md:h-16 md:w-16 bg-purple'/>
           </div>
         </div>
         
-        <h1 className='text-5xl italic font-bold'><span className="text-purple">--</span> years</h1>
-        <h1 className='text-5xl italic font-bold'><span className="text-purple">--</span> months</h1>
-        <h1 className='text-5xl italic font-bold'><span className="text-purple">--</span> days</h1>
+        <h1 className='text-5xl italic font-bold leading-tight md:text-6xl'><span className="text-purple">--</span> years</h1>
+        <h1 className='text-5xl italic font-bold leading-tight md:text-6xl'><span className="text-purple">--</span> months</h1>
+        <h1 className='text-5xl italic font-bold leading-tight md:text-6xl'><span className="text-purple">--</span> days</h1>
 
       </div>
     </main>
