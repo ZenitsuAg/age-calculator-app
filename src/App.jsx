@@ -30,11 +30,11 @@ function App() {
         </div>
 
         <div className='relative my-10 md:mt-0'>
-          <div className='pt-6 md:pt-8'>
+          <div className='pt-8'>
             <hr/>
           </div>
-          <div className='absolute top-0 left-0 right-0 md:left-auto'>
-            <img src={arrowIcon} alt="arrow icon" className='w-12 h-12 p-3 mx-auto rounded-full md:h-16 md:w-16 bg-purple'/>
+          <div className='absolute top-0 left-0 right-0 text-center md:left-auto md:text-left'>
+            <button className='w-12 h-12 p-8 mx-auto bg-center bg-no-repeat rounded-full md:h-16 md:w-16 bg-purple bg-arrow-icon'></button>
           </div>
         </div>
         
