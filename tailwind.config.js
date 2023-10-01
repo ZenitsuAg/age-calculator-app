@@ -18,6 +18,9 @@ export default {
       },
       fontFamily: {
         "Poppins": '"Poppins", serif',
+      }, 
+      backgroundImage: {
+        "arrow-icon": "url(./assets/images/icon-arrow.svg)"
       }
     },
   },
