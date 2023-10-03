@@ -4,7 +4,7 @@ export default function Input({ value, onChange, placeholder, error = false }) {
             <div className="tracking-widest uppercase">
                 <label
                     htmlFor={value.toLowerCase()}
-                    className="text-smokey-grey text-sm"
+                    className="text-[0.7rem] font-bold text-smokey-grey"
                 >
                     {value}
                 </label>
@@ -14,7 +14,7 @@ export default function Input({ value, onChange, placeholder, error = false }) {
                     id={value}
                     onChange={onChange}
                     placeholder={placeholder}
-                    className="p-2 mt-2 border rounded-lg border-off-white w-full"
+                    className="w-full p-2 mt-2 text-2xl border rounded-lg outline-none border-off-white focus:border-off-black focus:border-1"
                 />
             </div>
             {error && (
