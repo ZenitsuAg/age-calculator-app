@@ -20,6 +20,13 @@ function App() {
     setDays(e.target.value)
   }
 
+  const timeDifference =
+      Date.now() -
+      Date.parse(new Date(`${years}, ${months}, ${days}`)).toString();
+  const yr = Math.round(timeDifference / 3.154e10);
+  const mnth = Math.round((timeDifference % 3.154e10) / 2.628e9);
+  const dy = Math.round((timeDifference % 3.154e10 % 2.628e9) / 8.64e7);
+ 
   return (
     <main className='h-screen p-3 bg-off-white'>
        <div className='font-Poppins max-w-[375px] mx-auto bg-white rounded-2xl rounded-br-[100px] p-6 pt-11 mt-20 shadow-xl shadow-purple/10 md:max-w-[650px] md:p-10'>
@@ -38,9 +45,9 @@ function App() {
           </div>
         </div>
         
-        <h1 className='text-5xl italic font-bold leading-tight md:text-6xl'><span className="text-purple">--</span> years</h1>
-        <h1 className='text-5xl italic font-bold leading-tight md:text-6xl'><span className="text-purple">--</span> months</h1>
-        <h1 className='text-5xl italic font-bold leading-tight md:text-6xl'><span className="text-purple">--</span> days</h1>
+        <h1 className='text-5xl italic font-bold leading-tight md:text-6xl'><span className="text-purple">{yr}</span> years</h1>
+        <h1 className='text-5xl italic font-bold leading-tight md:text-6xl'><span className="text-purple">{mnth}</span> months</h1>
+        <h1 className='text-5xl italic font-bold leading-tight md:text-6xl'><span className="text-purple">{dy}</span> days</h1>
 
       </div>
     </main>
