@@ -22,7 +22,7 @@ function App() {
 
   return (
     <main className='h-screen p-3 bg-off-white'>
-       <div className='font-Poppins max-w-[375px] mx-auto bg-white rounded-2xl rounded-br-[100px] p-6 pt-11 mt-20 shadow-xl shadow-purple/10 md:max-w-[570px] md:p-10'>
+       <div className='font-Poppins max-w-[375px] mx-auto bg-white rounded-2xl rounded-br-[100px] p-6 pt-11 mt-20 shadow-xl shadow-purple/10 md:max-w-[650px] md:p-10'>
         <div className="flex flex-row max-w-[300px] gap-3 mx-auto md:mx-0 md:max-w-[390px]">
             <Input value={'Day'} onChange={handleDays} placeholder={'DD'} />
             <Input value={'Month'} onChange={handleMonths} placeholder={'MM'} />
