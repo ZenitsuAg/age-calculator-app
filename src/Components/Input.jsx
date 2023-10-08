@@ -1,4 +1,4 @@
-export default function Input({ value, onChange, placeholder, error = false }) {
+export default function Input({ value, onChange, placeholder, error1 = false, error2 , errorMsg }) {
     return (
         <div>
             <div className="tracking-widest uppercase">
@@ -14,13 +14,18 @@ export default function Input({ value, onChange, placeholder, error = false }) {
                     id={value}
                     onChange={onChange}
                     placeholder={placeholder}
-                    className="w-full p-2 mt-2 text-2xl border rounded-lg outline-none border-off-white focus:border-off-black focus:border-1"
+                    className={`w-full p-2 mt-2 text-2xl border rounded-lg outline-none border-off-white focus:border-off-black focus:border-1 ${error1 && 'border-light-red'} ${error2 && 'border-light-red'}`}
                 />
             </div>
-            {error && (
-                <p className="text-light-red text-[0.5rem] italic transform-none">
+            {error1 && (
+                <p className="text-[0.65rem] italic text-light-red transform-none">
                     This field is required
                 </p>
+            )}
+            {error2 && (
+                <p className="text-[0.65rem] italic text-light-red transform-none">
+                {errorMsg}
+            </p>
             )}
         </div>
     );
