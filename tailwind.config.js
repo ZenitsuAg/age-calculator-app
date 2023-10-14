@@ -20,7 +20,7 @@ export default {
         "Poppins": '"Poppins", serif',
       }, 
       backgroundImage: {
-        "arrow-icon": "url(./assets/images/icon-arrow.svg)"
+        "arrow-icon": "url(../assets/images/icon-arrow.svg)"
       }
     },
   },
