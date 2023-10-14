@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Input from "./Components/Input";
+import dayjs from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat";
 
 function App() {
     const [years, setYears] = useState(0);
@@ -12,14 +14,21 @@ function App() {
 
     const [formSubmitted, setFormSubmitted] = useState(false);
 
+    dayjs.extend(customParseFormat);
+    const isDateValid = dayjs(
+        `${years}-${months}-${days}`,
+        "YYYY-M-DD",
+        true
+    ).isValid();
+
     function handleSubmit(e) {
         e.preventDefault()
 
         // Get the current date
-        const currentDate = new Date();
+        const currentDate = dayjs();
 
         // Get the target date
-        const targetDate = new Date(years, months - 1, days);
+        const targetDate = dayjs(`${years}-${months}-${days}`, "YYYY-M-DD");
 
         // The time difference in milliseconds
         const timeDifference = currentDate - targetDate;
