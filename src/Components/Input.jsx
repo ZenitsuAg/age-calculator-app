@@ -27,7 +27,7 @@ export default function Input({
                     className={`w-full p-2 mt-2 text-2xl border rounded-lg outline-none border-off-white focus:border-off-black focus:border-1 ${
                         formSubmitted &&
                         (error1 || error2) &&
-                        "border-light-red"
+                        "border-red-500"
                     }`}
                 />
             </div>

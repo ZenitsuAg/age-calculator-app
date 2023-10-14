@@ -22,7 +22,7 @@ function App() {
     ).isValid();
 
     function handleSubmit(e) {
-        e.preventDefault()
+        e.preventDefault();
 
         // Get the current date
         const currentDate = dayjs();
@@ -35,14 +35,19 @@ function App() {
 
         const yrValue = Math.round(timeDifference / 3.154e10);
         const mnthValue = Math.round((timeDifference % 3.154e10) / 2.628e9);
-        const dyValue = Math.round(((timeDifference % 3.154e10) % 2.628e9) / 8.64e7);
-
-        // Lift the values up, so that we can share it with the h1 element that needs it.
-        setYr(yrValue);
-        setMnth(mnthValue);
-        setDy(dyValue);
+        const dyValue = Math.round(
+            ((timeDifference % 3.154e10) % 2.628e9) / 8.64e7
+        );
 
         setFormSubmitted(true);
+        if (isDateValid) {
+            // Lift the values up, so that we can share it with the h1 element that needs it.
+            setYr(yrValue);
+            setMnth(mnthValue);
+            setDy(dyValue);
+        } else {
+            return false;
+        }
     }
 
     return (
@@ -55,7 +60,7 @@ function App() {
                             onChange={(e) => setDays(e.target.value)}
                             placeholder={"DD"}
                             error1={days == ""}
-                            error2={days > 31 ? true : false}
+                            error2={days < 1 || days > 31 ? true : false}
                             errorMsg={"Must be a valid day"}
                             formSubmitted={formSubmitted}
                         />
@@ -64,7 +69,7 @@ function App() {
                             onChange={(e) => setMonths(e.target.value)}
                             placeholder={"MM"}
                             error1={months == ""}
-                            error2={(months > 12 || months < 1) ? true : false}
+                            error2={months > 12 || months < 1 ? true : false}
                             errorMsg={"Must be a valid month"}
                             formSubmitted={formSubmitted}
                         />
@@ -94,7 +99,7 @@ function App() {
                     </div>
                 </form>
 
-               <div className="text-5xl italic font-bold leading-tight md:text-6xl">
+                <div className="text-5xl italic font-bold leading-tight md:text-6xl">
                     <h1 className="">
                         <span className="text-purple">{yr}</span> years
                     </h1>
@@ -104,7 +109,7 @@ function App() {
                     <h1>
                         <span className="text-purple">{dy}</span> days
                     </h1>
-               </div>
+                </div>
             </div>
         </main>
     );
