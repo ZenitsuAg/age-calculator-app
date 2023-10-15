@@ -53,7 +53,7 @@ function App() {
     return (
         <main className="h-screen p-3 bg-off-white md:flex md:items-center md:justify-center">
             <div className="font-Poppins max-w-[375px] mx-auto bg-white rounded-2xl rounded-br-[100px] p-6 pt-11 mt-20 md:mt-0 shadow-xl shadow-purple/10 md:min-w-[650px] md:p-10">
-                <form action="" onSubmit={handleSubmit}>
+                <form action="#" onSubmit={handleSubmit}>
                     <div className="flex flex-row max-w-[300px] gap-3 mx-auto md:mx-0 md:max-w-[390px]">
                         <Input
                             value={"Day"}
@@ -94,7 +94,7 @@ function App() {
                             <button
                                 type="submit"
                                 className="w-12 h-12 p-8 mx-auto bg-center bg-no-repeat rounded-full md:h-16 md:w-16 bg-purple bg-arrow-icon hover:bg-off-black"
-                            ></button>
+                            />
                         </div>
                     </div>
                 </form>

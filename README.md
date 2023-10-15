@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/age-calculator-app-using-react-tailwindcss-and-vite-_xHr4UPANV)
+- Live Site URL: [GitHub Pages](https://zenitsuag.github.io/age-calculator-app/)
 
 ## My process
 

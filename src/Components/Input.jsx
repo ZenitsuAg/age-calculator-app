@@ -21,7 +21,7 @@ export default function Input({
                 <input
                     type="number"
                     name={value}
-                    id={value}
+                    id={value.toLowerCase()}
                     onChange={onChange}
                     placeholder={placeholder}
                     className={`w-full p-2 mt-2 text-2xl border rounded-lg outline-none border-off-white focus:border-off-black focus:border-1 ${
