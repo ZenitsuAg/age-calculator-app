@@ -14,9 +14,16 @@ function App() {
 
     const [formSubmitted, setFormSubmitted] = useState(false);
 
+    const formatMonthInput = (str) => {
+        if(str.length > 0 && str[0] == '0') {
+            return str[1]
+        } else {
+            return str
+        }
+    }
     dayjs.extend(customParseFormat);
     const isDateValid = dayjs(
-        `${years}-${months}-${days}`,
+        `${years}-${formatMonthInput(months)}-${days}`,
         "YYYY-M-DD",
         true
     ).isValid();
